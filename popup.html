@@ -1,0 +1,44 @@
+<!doctype html>
+<html style="min-width:600px; min-height: 300px">
+
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<title>Hello World Extension</title>
+	<style>
+		body {
+	  		background-image: url("beautiful-color-gradients-backgrounds-075-clean-mirror.png");
+		}
+
+		input[type="number"], textarea {
+ 			 background-color : #d6d6d6; 
+		}
+
+	</style>
+</head>
+
+<body>
+	<div id = 'mainDiv'>
+		<h3>
+		  Powerschool Calculator
+		  <small class="text-muted">by Arisrei Lim</small>
+		</h3>
+	    <p id='rawScore'>Your score will appear here!</p>
+	    <div id='categories'>Categories will appear here!</div>
+	    <div>
+	    	<center><button id="catWeight" class="btn btn-primary">Enter category weight</button></center>
+		</div>
+		<div style="padding-top: 5px;">
+	    	<center><button id="finalGradePredict" class="btn btn-info">Predict your grade after taking the final</button></center>
+		</div>
+	    <p id="demo"></p>
+	</div>
+	<div id="form_sample"></div>
+	<script src="jquery-3.4.1.js"></script>
+	<script src="popper.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<script src="bootbox.js"></script>
+    <script src="bootbox.locales.js"></script>
+    <script src ="sweetalert.min.js"></script>
+   	<script src="popup.js"></script>
+</body>
+</html>
