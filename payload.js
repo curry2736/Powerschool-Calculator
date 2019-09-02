@@ -80,8 +80,13 @@ for (x in document.getElementsByClassName('bold-underline')) {
 	if (timesRun == document.getElementsByClassName('bold-underline').length) {
 		break;
 	}
-	gradeType.push(document.getElementsByClassName('bold-underline')[x].parentElement.parentElement.cells[1].innerHTML);
-	timesRun +=1;
+    if (document.getElementsByClassName('bold-underline')[x].parentElement.parentElement.cells[1].innerHTML.includes('href')) {
+        gradeType.push(document.getElementsByClassName('bold-underline')[x].parentElement.parentElement.cells[1].childNodes[0].text);
+        timesRun +=1;
+    } else {
+    	gradeType.push(document.getElementsByClassName('bold-underline')[x].parentElement.parentElement.cells[1].innerHTML);
+    	timesRun +=1;
+    }
 }
 
 //remove duplicates
