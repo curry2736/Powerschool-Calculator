@@ -1,39 +1,37 @@
 {
-	"manifest_version": 2,
-	"name": "Powerschool Calculator V2",
-	"description": "Calculate and estimate your grades!",
-	"version": "2.0",
-	"author": "Arisrei Lim",
-
-	"background": {
-		"scripts": ["popup.js"],
-		"persistent": true
-	},
-
-	"permissions": [
-        "tabs",
-        "http://*/",
-        "https://*/",
-        "activetab"
-    ],
-	"browser_action": {
-		"default_icon": "logo.png",
-		"default_popup": "popup.html"
-	}, 
-
-	"content_scripts": [
-  	{
-    "matches": [
-      "<all_urls>"
-    ],
-    "js": [
-    	"bootbox.js",
-    	"sweetalert.min.js"
-    ],
-    "css" : [
-		
-    ]
-
-  	}
-		]
+   "author": "Arisrei Lim",
+   "background": {
+      "persistent": true,
+      "scripts": [ "popup.js" ]
+   },
+   "browser_action": {
+      "default_icon": "logo.png",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "css": [  ],
+      "js": [ "sweetalert.min.js" ],
+      "matches": [ "https://*/*" ],
+      "include_globs": [
+         "*powerschool.*",
+         "*ps.*",
+         "*scores.html*",
+         "portal",
+         "k12"
+      ],
+      "exclude_globs": [
+         "*home*",
+         "*attendance*",
+         "*requestform*",
+         "*schoolinformation*",
+         "*termgrades*"
+      ]
+   } ],
+   "description": "Calculate and estimate your grades!",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA+esfppFPUbAcDnS/k8fiVw6QeBd6j/o/pnX3WuospI4KCqTcFDefsUFVOl6VpmyIoJuQDVaU/0Xl+C/hhirAIwgzqOsLZqBUGFbSagK57+BOj67kMA2wgpQ/draqB8MeonIuFAzehUd2qoWwZmgviFTNz2YJ/Exs7DHdMKSgzxExYwsbyGCJhS2MStAE6/qaHunVFJ/T/kDoatHI03adX3nhoP1VckVllzGpKcMQ57TvMqfpJ0YpUoWXajizbJ9x3rRGS46VfK3OJqqoJvGfLCgWmoXuLa4qE+LpDygDz24UoqWO7uViXZTtSLs/TKPwwO1rvAxUh3DtXn5zwjnqNwIDAQAB",
+   "manifest_version": 2,
+   "name": "Powerschool Calculator V2 DEV",
+   "permissions": [ "activeTab" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.0"
 }
