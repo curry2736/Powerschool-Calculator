@@ -37,9 +37,7 @@ for (var i = 0; i < cusid_ele.length; ++i) {
     var substringWithComma = item.substring(0,position);
     var substring2WithComma = item.substring(position+1);
     if (!item.includes('/')) {
-    	console.log("no slash" + i);
     	if (isNaN(parseInt(item))) {
-    		console.log("not a number" + i);
     		gradeNumeratorArray.push(0);
     		gradeDenominatorArray.push(0);
     		continue;
@@ -63,7 +61,6 @@ for (var i = 0; i < cusid_ele.length; ++i) {
             complete2 = parseInt(complete2, 10);
             total2 += complete2;
             gradeDenominatorArray.push(complete2);
-            //console.log(parseInt(substringWithComma), 10);
         }
 
     } else {
@@ -168,57 +165,11 @@ for (var i = 0; i < initialGradeTypeLength; i++) {
 
                 totalNumerator[j] = totalNumerator[j] + gradeNumeratorArray[i];
                 totalDenominator[j] = totalDenominator[j] + gradeDenominatorArray[i];
-                //console.log(totalNumerator);
-                //console.log(totalNumerator);
             }
         }
     }
 }
 
-/*var chart = document.createElement("CANVAS");
-chart.setAttribute("id", "myCanvas");
-document.getElementById("content-main").appendChild(chart);
-var ctx = chart.getContext("2d");
-
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: 'Grade Makeup',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
-});*/
-
-console.log(gradeDenominatorArray);
-console.log(gradeNumeratorArray);
 
 chrome.runtime.sendMessage({content: total + "/" + total2, type: "m1"});
 chrome.runtime.sendMessage({content: gradeTypeNoDupe, type: "m2", numerator: totalNumerator, denominator: totalDenominator}, function(response) {
@@ -271,11 +222,6 @@ chrome.runtime.sendMessage({content: gradeTypeNoDupe, type: "m2", numerator: tot
 	document.getElementById("content-main").appendChild(chart);
 	var ctx = chart.getContext("2d");
 
-
-
-	console.log(graphWeight);
-
-
 	var myChart = new Chart(ctx, {
 	    type: 'bar',
 	    data: {
@@ -311,7 +257,6 @@ chrome.runtime.sendMessage({content: gradeTypeNoDupe, type: "m2", numerator: tot
 	        }
 	    }
 	});
-	console.log(response.weight);
 });
 
 

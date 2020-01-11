@@ -14,28 +14,31 @@
 		}
 
 	</style>
+
 </head>
 
 <body>
-	<div id = 'mainDiv'>
-		<h3>
-		  Powerschool Calculator
-		  <small class="text-muted"></small>
-		</h3>
-	    <p id='rawScore'>Your score will appear here!</p>
-	    <div id='categories'>Categories will appear here!</div>
-	    <div>
-	    	<center><button id="catWeight" class="btn btn-primary">Enter category weight</button></center>
+	<div class = "avatar">
+		<div id = 'mainDiv'>
+			<h3>
+			  Powerschool Calculator
+			  <small class="text-muted"></small>
+			</h3>
+		    <p id='rawScore'>Your score will appear here!</p>
+		    <div id='categories'>Categories will appear here!</div>
+		    <div>
+		    	<center><button id="catWeight" class="btn btn-primary">Enter category weight</button></center>
+			</div>
+			<div style="padding-top: 5px;">
+		    	<center><button id="finalGradePredict" class="btn btn-info">Predict your grade after taking the final</button></center>
+			</div>
+		    <p id="demo"></p>
 		</div>
-		<div style="padding-top: 5px;">
-	    	<center><button id="finalGradePredict" class="btn btn-info">Predict your grade after taking the final</button></center>
-		</div>
-	    <p id="demo"></p>
+		<div id="form_sample"></div>
 	</div>
-	<div id="form_sample"></div>
-	<script src="jquery-3.4.1.js"></script>
+   	<script src="jquery-3.4.1.js"></script>
 	<script src="popper.min.js"></script>
     <script src ="sweetalert.min.js"></script>
-   	<script src="popup.js"></script>
+	<script src="popup.js"></script>
 </body>
 </html>
