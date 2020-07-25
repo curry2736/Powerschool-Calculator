@@ -22,10 +22,7 @@
    "manifest_version": 2,
    "name": "Powerschool Calculator",
    "permissions": [         
-      "activeTab",
-        "storage",
-        "declarativeContent" ,
-        "tabs"
+      "activeTab"
    ],
-   "version": "2.14"
+   "version": "2.21"
 }
